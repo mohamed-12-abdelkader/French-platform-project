@@ -1,25 +1,99 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+//import { Route,Routes } from 'react-router-dom';
+import Hedear from './components/Hedear';
+import Description from './components/Description';
+import Signup from './components/Singup';
+import Courses from './components/Courses';
+import Saidbar from './components/Saidbar';
+import Footer from './components/Footer';
+
+import { useState,useEffect } from 'react';
 
 function App() {
+
+  const [showSignupPage,setShowSignupPage]=useState(false)
+
+  const [firstName,setFirstName]=useState("")
+  const [secondName,setSecondName]=useState("")
+  const [email,setEmail]=useState("")
+  const [password,setPassword]=useState("")
+  const [phoneNumber,setPhoneNumber]=useState("")
+
+  useEffect(() => {
+    // استعادة البيانات المحفوظة من التخزين المحلي عند تحميل الصفحة
+    const storedFirstName = localStorage.getItem('firstName');
+    const storedSecondName = localStorage.getItem('secondName');
+    const storedEmail = localStorage.getItem('email');
+    const storedPhoneNumber = localStorage.getItem('phoneNumber');
+
+    if (storedFirstName && storedSecondName && storedEmail && storedPhoneNumber) {
+      setFirstName(storedFirstName);
+      setSecondName(storedSecondName);
+      setEmail(storedEmail);
+      setPhoneNumber(storedPhoneNumber);
+      setShowSignupPage(true);
+      
+    } else {
+      setShowSignupPage(false);
+      
+    }
+  }, []);
+  
+  const handleReset = () => {
+    // إعادة تعيين الحقول وحذف البيانات من التخزين المحلي عند الضغط على زر إعادة التعيين
+    setFirstName('');
+    setSecondName('');
+    setEmail('');
+    setPassword('');
+    setPhoneNumber('');
+    
+    setShowSignupPage(false)
+    localStorage.removeItem('firstName');
+    localStorage.removeItem('secondName');
+    localStorage.removeItem('email');
+    localStorage.removeItem('phone');
+  };
+  const handleSignup = () => {
+    // قم بإتمام عملية إنشاء الحساب هنا
+
+    // حفظ البيانات في التخزين المحلي
+    localStorage.setItem('firstName', firstName);
+    localStorage.setItem('secondName', secondName);
+    localStorage.setItem('email', email);
+    localStorage.setItem('phoneNumber', phoneNumber);
+
+    // عرض رسالة الترحيب
+    
+    setShowSignupPage(true)
+  };
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+  <Hedear showSignupPage={showSignupPage} setshowSignupPage={setShowSignupPage} firstName={firstName} handleReset={handleReset} />
+   {showSignupPage? "":<Signup showSignupPage={showSignupPage} 
+   setshowSignupPage={setShowSignupPage}  
+   firstName={firstName}
+    setFirstName={setFirstName}
+     secondName={secondName} 
+   setSecondName={setSecondName}
+   email={email}
+   setEmail={setEmail}
+   password={password}
+   setPassword={setPassword}
+   phoneNumber={phoneNumber}
+   setPhoneNumber={setPhoneNumber}
+   handleSignup={handleSignup}
+   /> }
+   {showSignupPage ?<>
+   <Saidbar/>
+   <Description/>
+<Courses/>
+<Footer/>
+    </>:null}
+    </>
   );
 }
-
+ 
+ 
 export default App;
+

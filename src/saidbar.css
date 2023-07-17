@@ -1,0 +1,154 @@
+
+.said{
+    background-image: url(../public/8eb39fc2-8a8f-4db6-8485-2947b1369044.jpeg);
+    background-size: cover;
+    height: 500px;
+    width: 100% !important;
+    margin: auto;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    
+}
+.said h2{
+    position: relative;
+    bottom: 18%;
+    right:  8%;
+    color: blue;
+    font-weight: bold;
+}
+
+
+
+
+.said h1{
+    
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 30px;
+    margin-top: auto;
+}
+.description{
+    margin-top: 100px !important;
+   display: block;
+   display: flex;
+   width: 80%;
+   margin: auto;
+   z-index: -1;
+}
+
+
+
+.description .icon{
+    height: 200px;
+    width: 200px;
+    background-color: aqua;
+    border-radius: 50%;
+
+}
+
+.description .icon-div{
+    margin: auto;
+    position: relative;
+}
+.icon-div h5{
+    margin-top: 15px;
+    text-align: center;
+    
+    width: 250px;
+    height: 40px;
+    background-color: #294d61;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px !important;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+   
+}
+
+.containerr{
+    z-index: -1;
+}
+
+
+.footer-content {
+ margin-top: 20PX;
+}
+.footer-content h3{
+    color: white;
+    margin-top: 30px;
+}
+.footer-content p{
+    width: 500px;
+    height: 5px;
+    background-color: aliceblue;
+    border-radius: 5px;
+    margin:15px auto;
+}
+.courses-container {
+    margin: 50px 0;
+    border-radius: 50px;
+    border: solid 3px #ccc;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1), 0px -5px 10px rgba(0, 0, 0, 0.1);
+    margin: 50px 0 !important;
+  }
+  
+
+.classrooms{
+    height: 150px;
+    width: 400px;
+ background-color: #ccc;
+ margin: auto;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ border-top-left-radius: 100px;
+ border-bottom-right-radius: 100px;
+ color: #294d61;
+ border: 5px solid #294d61;
+}
+
+@media screen and (max-width: 450px) {
+    .said {
+      
+      background-size:55lvh;
+      background-repeat: no-repeat;
+      background-position-y: 20%;
+      background-position-x:50% ;
+     height: 200px;
+     
+    }
+    .said h2{
+        font-size: 14px;
+    }
+    .said-containar {
+      
+        height: 150px !important;
+      }
+      .icon-div{
+        margin-top: 40px !important;
+      }
+
+      .description {
+        display: block;
+         margin:  50px 60px!important ;
+         margin-top: 20px;
+       }
+       .containerr {
+        display: block;
+         
+       }
+       .courses-container{
+        display: block !important;
+        margin-left: 50px !important;
+        width: 350px !important;
+        margin: 50px auto !important;
+       }
+      
+       .classrooms{
+        width: 200px;
+       }
+  }
