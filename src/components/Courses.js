@@ -14,7 +14,7 @@ const DatacourseJsx= DataCourses.map((dataCourse)=>{
         <>
        
         <div className='card-content' key={dataCourse.id} style={{marginLeft:"23px",marginBottom:"60px"}}>
-          <Slide>
+          <Slide className='slide'>
      <Card style={{ width: '18rem' , marginTop:"100px",textAlign:"center", }}>
      <Card.Img variant="top" src={dataCourse.imgUrl} />
      <Card.Body>

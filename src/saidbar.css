@@ -92,10 +92,13 @@
     margin: 50px 0;
     border-radius: 50px;
     border: solid 3px #ccc;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1), 0px -5px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5), 0px -5px 10px rgba(0, 0, 0, 0.5);
     margin: 50px 0 !important;
   }
   
+  .card{
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8), 0px -5px 10px rgba(0, 0, 0, 0.8);
+  }
 
 .classrooms{
     height: 150px;
@@ -150,5 +153,11 @@
       
        .classrooms{
         width: 200px;
+       }
+       .footer-content{
+        width: 400px;
+       }
+       .footer-content p{
+        width: 400px;
        }
   }
