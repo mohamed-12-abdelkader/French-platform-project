@@ -18,11 +18,11 @@ const DatacourseJsx= DataCourses.map((dataCourse)=>{
      <Card style={{ width: '18rem' , marginTop:"100px",textAlign:"center", }}>
      <Card.Img variant="top" src={dataCourse.imgUrl} />
      <Card.Body>
-       <Card.Title>{dataCourse.title}</Card.Title>
-       <Card.Text>
+       <Card.Title className='font'>{dataCourse.title}</Card.Title>
+       <Card.Text className='font'>
          {dataCourse.description}
        </Card.Text>
-       <Button variant="primary">{dataCourse.title}</Button>
+       <Button className='font' variant="primary">{dataCourse.title}</Button>
      </Card.Body>
    </Card>
    </Slide>
@@ -38,7 +38,7 @@ const DatacourseJsx= DataCourses.map((dataCourse)=>{
     <div style={{textAlign:"center"}}>
        <Zoom>
      <div className='classrooms' style={{marginTop:"70px"}}>
-          <h1>الصفوف الدراسية</h1>
+          <h1 className='font' style={{fontWeight:"bold"}}>الصفوف الدراسية</h1>
         </div>
         </Zoom>
    <div className='courses-container' style={{display:"flex",margin:"auto"}}>

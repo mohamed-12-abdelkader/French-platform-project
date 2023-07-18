@@ -26,7 +26,7 @@ function Saidbar() {
   return (
     <div className='said-containar' style={{height:"500px",marginTop:"50px",borderRadius:"30px" ,marginBottom:"50px"}} >
       <div className='said'>
-     <h2>{text}</h2>
+     <h2 className="font">{text}</h2>
       </div>
     </div>
   )

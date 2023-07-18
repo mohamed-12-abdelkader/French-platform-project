@@ -18,7 +18,7 @@ function Description() {
              </div>
       </Slide>
              <Zoom>
-             <h5>وفر وقتك</h5>
+             <h5 className='font'>وفر وقتك</h5>
              </Zoom>
         </div >
         <div className='icon-div'>
@@ -28,7 +28,7 @@ function Description() {
              </div>
              </Slide>
              <Zoom>
-             <h5 style={{backgroundColor:"#6da5c0"}}>شاهد دروسك اكثر من مرة</h5>
+             <h5 className='font' style={{backgroundColor:"#6da5c0"}}>شاهد دروسك اكثر من مرة</h5>
              </Zoom>
         </div >
         <div className='icon-div'>
@@ -38,7 +38,7 @@ function Description() {
              </div>
           </Slide>
              <Zoom>
-             <h5 style={{backgroundColor:"#86a8cf"}}>احضر امتحانات دورية و مستمرة</h5>
+             <h5 className='font' style={{backgroundColor:"#86a8cf"}}>احضر امتحانات دورية و مستمرة</h5>
              </Zoom>
         </div>
          </div>
