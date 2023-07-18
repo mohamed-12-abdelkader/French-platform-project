@@ -46,7 +46,7 @@
     width: 200px;
     background-color: aqua;
     border-radius: 50%;
-
+ margin: auto;
 }
 
 .description .icon-div{
@@ -117,7 +117,7 @@
 @media screen and (max-width: 450px) {
     .said {
       
-      background-size:55lvh;
+    
       background-repeat: no-repeat;
       background-position-y: 20%;
       background-position-x:50% ;
@@ -147,10 +147,13 @@
        .courses-container{
         display: block !important;
         margin-left: 50px !important;
-        width: 350px !important;
+        width: 90% !important;
         margin: 50px auto !important;
        }
-      
+      .courses-container .card{
+        width: 90% !important;
+       
+      }
        .classrooms{
         width: 200px;
        }
