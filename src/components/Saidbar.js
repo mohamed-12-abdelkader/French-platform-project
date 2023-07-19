@@ -14,7 +14,7 @@ function Saidbar() {
         setText((prevText) => prevText + originalText[index]);
         setIndex((prevIndex) => prevIndex + 1);
       }
-    }, 100);
+    }, 200);
 
     return () => {
         clearInterval(interval);

@@ -53,19 +53,7 @@ function App() {
     localStorage.removeItem('email');
     localStorage.removeItem('phone');
   };
-  const handleSignup = () => {
-    // قم بإتمام عملية إنشاء الحساب هنا
-
-    // حفظ البيانات في التخزين المحلي
-    localStorage.setItem('firstName', firstName);
-    localStorage.setItem('secondName', secondName);
-    localStorage.setItem('email', email);
-    localStorage.setItem('phoneNumber', phoneNumber);
-
-    // عرض رسالة الترحيب
-    
-    setShowSignupPage(true)
-  };
+  
   
   return (
     <>
@@ -82,7 +70,7 @@ function App() {
    setPassword={setPassword}
    phoneNumber={phoneNumber}
    setPhoneNumber={setPhoneNumber}
-   handleSignup={handleSignup}
+  
    /> }
    {showSignupPage ?<>
    <Saidbar/>

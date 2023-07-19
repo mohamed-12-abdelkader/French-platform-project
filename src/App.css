@@ -22,15 +22,18 @@ border-radius: 30px;
 background-color: #ccccccba;
 
 }
-.row .input{
+.row .input,.row .select{
  margin-bottom:15px;
 width: 500px;
 
 }
-.row .input label{
+.row .input label, .row .select label{
   font-size: 20px;
   font-weight: bold;
   z-index: 1;
+  font-family: 'Almarai', sans-serif;
+font-family: 'IBM Plex Sans Arabic', sans-serif;
+font-family: 'Playfair Display', serif;
 }
 .row button{
   width: 100px;
@@ -53,7 +56,12 @@ background-color: #6da5c0;
   .row{
    width: 350px !important;
   }
-  .row .input{
+  .row .input, .row .select{
     margin-left: 25px;
+    width: 90%;
+    margin: 5px;
+  }
+  .h2{
+    width: auto;
   }
 }
