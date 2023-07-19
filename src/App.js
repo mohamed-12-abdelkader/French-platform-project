@@ -18,6 +18,8 @@ function App() {
   const [email,setEmail]=useState("")
   const [password,setPassword]=useState("")
   const [phoneNumber,setPhoneNumber]=useState("")
+  const [open, setOpen] = useState(false);
+
 
   useEffect(() => {
     // استعادة البيانات المحفوظة من التخزين المحلي عند تحميل الصفحة
@@ -54,10 +56,19 @@ function App() {
     localStorage.removeItem('phone');
   };
   
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+const handleAppClick = () => {
+    if (open) {
+      handleClose();
+    }
+  };
   
   return (
-    <>
-  <Hedear showSignupPage={showSignupPage} setshowSignupPage={setShowSignupPage} firstName={firstName} handleReset={handleReset} />
+    <div onClick={handleAppClick} >
+  <Hedear handleClose={handleClose} open={open} secondName={secondName} showSignupPage={showSignupPage} setshowSignupPage={setShowSignupPage} firstName={firstName} handleReset={handleReset} setOpen={setOpen} />
    {showSignupPage? "":<Signup showSignupPage={showSignupPage} 
    setshowSignupPage={setShowSignupPage}  
    firstName={firstName}
@@ -78,7 +89,7 @@ function App() {
 <Courses/>
 <Footer/>
     </>:null}
-    </>
+    </div>
   );
 }
  

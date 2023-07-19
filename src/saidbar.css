@@ -72,8 +72,12 @@
 .containerr{
     z-index: -1;
 }
-
-
+.card-content .card{
+ transition: 0.5s ;
+}
+.card-content .card:hover{
+  transform: scale(1.1);
+}
 .footer-content {
  margin-top: 20PX;
 }

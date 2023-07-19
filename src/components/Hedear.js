@@ -1,25 +1,23 @@
 import React from 'react'
+import "../App.css"
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import IconButton from '@mui/material/IconButton';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import CloseIcon from '@mui/icons-material/Close';
 import PersonIcon from '@mui/icons-material/Person';
 import InputOutlinedIcon from '@mui/icons-material/InputOutlined';
 
-import { useState } from 'react';
-function Hedear({firstName,showSignupPage,setshowSignupPage,handleReset}) {
-  const [open, setOpen] = useState(false);
+
+function Hedear({handleClose,secondName,firstName,showSignupPage,handleReset,open,setOpen}) {
+ 
      
     function showCardClick(){
       setOpen(true)
     }
 
-    const handleClose = () => {
-      setOpen(false);
-    }; 
+     
     
   return (
     <>
@@ -52,23 +50,21 @@ function Hedear({firstName,showSignupPage,setshowSignupPage,handleReset}) {
             </div>
             
 
-{open? (<div
-
-className='card'  style={{position:"absolute",right:"10%",padding:"10px",marginRight:"10px",width:"200px",backgroundColor:"#f3f4f6",borderRadius:"20px"}} >
+{open? (<div onClick={handleClose}
+ 
+className='card'  style={{position:"absolute",right:"10%",padding:"10px",marginRight:"10px",width:"250px",backgroundColor:"#f3f4f6",borderRadius:"20px"}} >
     <div style={{display:"grid"}}>
-     <span className='font' style={{margin:"10px",fontWeight:"bold"}}>welcome:{firstName}</span> 
-     <span className='font' style={{fontWeight:"bold",margin:" 10px"}}><PersonIcon/>my profile</span>
+     <span className='font' style={{margin:"10px",fontWeight:"bold",fontSize:"20px"}}>welcome:{firstName} {secondName} </span> 
+     
+     <span className='font profile' style={{fontWeight:"bold",margin:" 10px",fontSize:"20px"}}><PersonIcon/>my profile</span>
+     
      <span>
      <IconButton onClick={handleReset} aria-label="delete"  color="primary" >
        <InputOutlinedIcon style={{height:"40px",width:"40px"}}/>
       </IconButton>
      
       </span>
-      <span>
-      <IconButton onClick={handleClose} aria-label="delete"  color="primary" >
-       <CloseIcon style={{height:"40px",width:"40px"}}/>
-      </IconButton>
-      </span>
+      
     </div>
     </div>):null}
             
