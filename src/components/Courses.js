@@ -44,7 +44,7 @@ const DatacourseJsx= DataCourses.map((dataCourse)=>{
     <div style={{textAlign:"center"}}>
        <Zoom>
      <div className='classrooms' style={{marginTop:"70px"}}>
-          <h1 className='font' style={{fontWeight:"bold"}}>الصفوف الدراسية</h1>
+          <h1 className='font' style={{fontWeight:"bold"}}>الصفوف ة</h1>
         </div>
         </Zoom>
    <div className='courses-container' style={{display:"flex",margin:"auto"}}>
