@@ -40,7 +40,7 @@ function Hedear({handleClose,secondName,firstName,showSignupPage,handleReset,ope
         >
         </Nav>
 
-        <div>
+        <div>   
          
             {showSignupPage ?<> <div style={{display:"flex"}}>
                    

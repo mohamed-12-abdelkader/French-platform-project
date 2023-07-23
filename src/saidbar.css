@@ -118,6 +118,16 @@
  color: #294d61;
  border: 5px solid #294d61;
 }
+.logo {
+  position: fixed;
+  top: 0;
+ width: 100% !important;
+ margin-bottom: 50px;
+height: 80px;
+background-color: #fff;
+border-bottom: 2px #ccc solid;
+  z-index: 999; /* للتأكد من أن العنصر دائمًا في الأمام */
+}
 
 @media screen and (max-width: 450px) {
     .said {
@@ -161,6 +171,17 @@
       }
        .classrooms{
         width: 200px;
+       }
+       .container-content{
+        margin: auto !important;
+        margin-top: 50px !important;
+       }
+       .container-vedio{
+        width: 400px;
+        margin: auto;
+       }
+       .vedio{
+        width: 350px !important;
        }
        .footer-content{
         width: 400px;

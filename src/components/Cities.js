@@ -3,7 +3,7 @@ export const Cities= [
     {id:Math.random(),title:"الجيزة"},
     {id:Math.random(),title:"اسكندرية"},
     {id:Math.random(),title:"مطروح"},
-    {id:Math.random(),title:"بنى سويف"},
+    {id:Math.random(),title:"بنى سويف"}, 
     {id:Math.random(),title:"المنيا"},
     {id:Math.random(),title:"اسيوط"},
     {id:Math.random(),title:"الفيوم"},

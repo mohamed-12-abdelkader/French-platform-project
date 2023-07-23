@@ -43,8 +43,10 @@ function Signup({showSignupPage,setEmail,setshowSignupPage,firstName,setFirstNam
     localStorage.setItem('phoneNumber', phoneNumber);
    
     
-        setshowSignupPage(true)
+    setshowSignupPage(true)
       };
+
+      
 
       const handleClickOpen = () => {
         setOpen(true);

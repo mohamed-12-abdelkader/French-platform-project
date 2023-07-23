@@ -5,8 +5,13 @@ import { Slide } from "react-awesome-reveal";
 import "../saidbar.css"
 import { DataCourses } from './Datacourse';
 import { Zoom } from "react-awesome-reveal";
-function Courses() {
-  
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
+   
+   
+function Courses(setShowSignupPage) {
+  const [hedear,setHedear]=useState(false)
+    
 
 const DatacourseJsx= DataCourses.map((dataCourse)=>{
     return(
@@ -22,7 +27,8 @@ const DatacourseJsx= DataCourses.map((dataCourse)=>{
        <Card.Text className='font'>
          {dataCourse.description}
        </Card.Text>
-       <Button className='font' variant="primary">{dataCourse.title}</Button>
+
+       <Button   className='font' variant="primary"><Link style={{color:"white",textDecoration:"none"}}  to={dataCourse.path}>{dataCourse.title}</Link> </Button>
      </Card.Body>
    </Card>
    </Slide>
