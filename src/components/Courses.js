@@ -6,19 +6,19 @@ import "../saidbar.css"
 import { DataCourses } from './Datacourse';
 import { Zoom } from "react-awesome-reveal";
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+
    
    
 function Courses(setShowSignupPage) {
-  const [hedear,setHedear]=useState(false)
+  
     
 
 const DatacourseJsx= DataCourses.map((dataCourse)=>{
     return(
         
-        <>
+        <div key={dataCourse.id}>
        
-        <div className='card-content' key={dataCourse.id} style={{marginLeft:"23px",marginBottom:"60px"}}>
+        <div className='card-content'  style={{marginLeft:"23px",marginBottom:"60px"}}>
           <Slide className='slide'>
      <Card style={{ width: '18rem' , marginTop:"100px",textAlign:"center", }}>
      <Card.Img variant="top" src={dataCourse.imgUrl} />
@@ -34,7 +34,7 @@ const DatacourseJsx= DataCourses.map((dataCourse)=>{
    </Slide>
    </div>
  
- </>
+ </div>
 
     
     )
@@ -44,7 +44,7 @@ const DatacourseJsx= DataCourses.map((dataCourse)=>{
     <div style={{textAlign:"center"}}>
        <Zoom>
      <div className='classrooms' style={{marginTop:"70px"}}>
-          <h1 className='font' style={{fontWeight:"bold"}}>الصفوف ة</h1>
+          <h1 className='font' style={{fontWeight:"bold"}}>الصفوف الدراسية</h1>
         </div>
         </Zoom>
    <div className='courses-container' style={{display:"flex",margin:"auto"}}>

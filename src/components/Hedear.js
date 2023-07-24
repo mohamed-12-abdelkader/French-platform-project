@@ -56,11 +56,11 @@ className='card'  style={{position:"absolute",right:"10%",padding:"10px",marginR
     <div style={{display:"grid"}}>
      <span className='font' style={{margin:"10px",fontWeight:"bold",fontSize:"20px"}}>welcome:{firstName} {secondName} </span> 
      
-     <span className='font profile' style={{fontWeight:"bold",margin:" 10px",fontSize:"20px"}}><PersonIcon/>my profile</span>
+     <span className='font profile' style={{fontWeight:"bold",margin:" 10px",fontSize:"20px"}}><PersonIcon style={{color:"#1976d2"}}/>my profile</span>
      
      <span>
      <IconButton onClick={handleReset} aria-label="delete"  color="primary" >
-       <InputOutlinedIcon style={{height:"40px",width:"40px"}}/>
+     <InputOutlinedIcon style={{height:"40px",width:"40px"}}/>  <h3 className='font' style={{marginLeft:"5px"}}>log out</h3> 
       </IconButton>
      
       </span>

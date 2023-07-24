@@ -129,6 +129,76 @@ border-bottom: 2px #ccc solid;
   z-index: 999; /* للتأكد من أن العنصر دائمًا في الأمام */
 }
 
+
+/* تعديل لشاشات التابلت */
+@media screen and (max-width: 768px) {
+  .said {
+    background-repeat: no-repeat;
+    background-position: center 20%;
+    height: 150px;
+  }
+  
+  .said h2 {
+    font-size: 14px;
+  }
+  
+  .said-containar {
+    height: 100px !important;
+  }
+  
+  .icon-div {
+    margin-top: 20px !important;
+  }
+
+  .description {
+    margin: 20px 30px !important;
+  }
+
+  .containerr {
+    display: block;
+  }
+
+  .courses-container {
+    display: block !important;
+    margin-left: 30px !important;
+    width: 90% !important;
+    margin: 30px auto !important;
+  }
+
+  .courses-container .card {
+    width: 90% !important;
+  }
+
+  .classrooms {
+    width: 150px;
+  }
+
+  .container-content {
+    margin: auto !important;
+    margin-top: 30px !important;
+  }
+
+  .container-vedio {
+    width: 350px;
+    margin: auto;
+  }
+
+  .vedio {
+    width: 300px !important;
+  }
+
+  .footer-content {
+    width: 350px;
+  }
+
+  .footer-content p {
+    width: 350px;
+  }
+}
+
+
+
+
 @media screen and (max-width: 450px) {
     .said {
       
@@ -190,3 +260,4 @@ border-bottom: 2px #ccc solid;
         width: 400px;
        }
   }
+

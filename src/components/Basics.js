@@ -22,19 +22,16 @@ import "../saidbar.css"
 
     return(
       <>
-      <div >
-        <div className="logo">
-   <div  style={ {display:"flex", justifyContent:"center",height:"80px",alignItems:"center", widows:"100%",marginBottom:"50px"}} >
-    <img src="logo.jpg" style={{height:"60px",width:"300px"}}/>
-   </div>
-</div>
-        <Container className="container-content"  style={{margin:"50px ",direction:"rtl",marginTop:"100px"}}>
+      
+      
+
+        <Container className="container-content"  style={{margin:"50px ",direction:"rtl",marginTop:"15px"}}>
             <div className="container-vedio" style={{display:"flex", flexWrap:"wrap",margin:"auto"}} >
                {vedioJsx}
             </div>
         </Container>
        <Footer/>
-       </div>
+       
         </>
     )
  }
