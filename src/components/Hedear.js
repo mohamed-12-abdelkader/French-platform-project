@@ -8,6 +8,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import PersonIcon from '@mui/icons-material/Person';
 import InputOutlinedIcon from '@mui/icons-material/InputOutlined';
+import { Link } from 'react-router-dom';
 
 
 function Hedear({handleClose,secondName,firstName,showSignupPage,handleReset,open,setOpen}) {
@@ -23,14 +24,16 @@ function Hedear({handleClose,secondName,firstName,showSignupPage,handleReset,ope
     <>
     
     <Navbar expand="lg" style={{backgroundColor:"#ffffff",borderBottom:"solid 2px #ccc"}}>
-    <Container >
+    <Container > <Link to="/">
+    
+    
       <img alt=""
             src="logo.jpg"
             width="200"
             height="50"
             className="d-inline-block align-top"
             />
-            
+           </Link> 
       <Navbar.Toggle aria-controls="navbarScroll" />
       <Navbar.Collapse id="navbarScroll">
         <Nav
@@ -56,7 +59,9 @@ className='card'  style={{position:"absolute",right:"10%",padding:"10px",marginR
     <div style={{display:"grid"}}>
      <span className='font' style={{margin:"10px",fontWeight:"bold",fontSize:"20px"}}>welcome:{firstName} {secondName} </span> 
      
-     <span className='font profile' style={{fontWeight:"bold",margin:" 10px",fontSize:"20px"}}><PersonIcon style={{color:"#1976d2"}}/>my profile</span>
+     <span className='font profile' style={{fontWeight:"bold",margin:" 10px",fontSize:"20px"}}>
+      
+     <Link to="/profile/myprofaile" style={{textDecoration:"none"}}> <PersonIcon style={{color:"#1976d2"}}/>my profile </Link></span>
      
      <span>
      <IconButton onClick={handleReset} aria-label="delete"  color="primary" >

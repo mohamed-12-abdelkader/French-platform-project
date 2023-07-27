@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route,Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Hedear from './components/Hedear';
 import Description from './components/Description';
 import Signup from './components/Singup';
@@ -11,6 +11,13 @@ import FirstGrade from './components/Firstgrade'
 import SecondGrade from './components/SecondGrade';
 import ThirdGrade from './components/ThirdGrade';
 import {useEffect,useState } from 'react';
+import Profile from './components/profile';
+import Myprofaile from './components/Myprofaile';
+import Mycourses from './components/Mycourses';
+import { Views } from './components/views';
+import { Results } from './components/Results';
+import { Assignmentresults } from './components/Assignmentresults';
+import HomeworkResultsVideos from './components/HomeworkResultsVideos';
 
 
 export default function Home( ){
@@ -109,6 +116,16 @@ export default function Home( ){
      <Route path='/FirstGrade' element={<FirstGrade/>}/>
      <Route path='/SecondGrade' element={<SecondGrade/>}/>
      <Route path='/ThirdGrade' element={<ThirdGrade/>}/>
+    <Route path='/profile' element={<Profile email={email} phoneNumber={phoneNumber} firstName={firstName} secondName={secondName} />} > 
+     <Route index element={<Myprofaile/>} />
+     <Route path='myprofaile' element={<Myprofaile email={email} phoneNumber={phoneNumber} firstName={firstName}  secondName={secondName} />}/>
+     <Route path='mycourses' element={<Mycourses/>} />
+     <Route path='views' element={<Views/>} />
+     <Route path='results' element={<Results/>} />
+     <Route path='Assignmentresults' element={<Assignmentresults/>} />
+     <Route path='resultsvideos' element={<HomeworkResultsVideos/>} />
+    </Route>
+  
 
      </Routes>
      </div>
